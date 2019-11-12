@@ -94,7 +94,7 @@ tr{
   border:1px solid #dddddd !important;
 }
 .cv-image{
-  background-image:url("https://ideapod.com/wp-content/uploads/2017/08/person-1.jpg");
+  background-image:url("../me.jpg");
   background-size:cover;
   background-repeat:no-repeat;
 /*   background-position:10px -15px; */
