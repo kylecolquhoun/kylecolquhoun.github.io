@@ -17,6 +17,7 @@ html, body, .cv{
   background-repeat:no-repeat; */
   font-family:monospace;
   color:#17223b;
+  background-image: linear-gradient(to right top, #13003d, #3b003e, #5b0038, #74002c, #85001d);
 }
 /* width */
 ::-webkit-scrollbar {
