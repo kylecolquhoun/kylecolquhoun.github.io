@@ -94,7 +94,7 @@ tr{
   border:1px solid #dddddd !important;
 }
 .cv-image{
-  background-image:url("../me.jpg");
+  background-image:url("https://cdn.pixabay.com/photo/2016/09/29/13/08/planet-1702788_960_720.jpg");
   background-size:cover;
   background-repeat:no-repeat;
   background-position:0px -50px;
