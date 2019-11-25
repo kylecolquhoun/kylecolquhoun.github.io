@@ -1,0 +1,260 @@
+<html>
+
+    <head>
+<link href="https://fonts.googleapis.com/css?family=Taviraj&display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css?family=Calistoga&display=swap" rel="stylesheet"><link rel="stylesheet"
+      href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.16.2/build/styles/default.min.css">
+<script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.16.2/build/highlight.min.js"></script>
+      <title>My First Site</title>
+
+    </head>
+
+  <body>
+
+<div class="banner">
+  <h1 class="title">
+Full Stack Development with Python – Personal Notes, Demos & Examples
+  </h1>
+</div>
+<div class="content-main">
+  <h2><span>End Go</span>al</h2>
+  <p class="boldaf">
+By the end of this we should have a fully functional community forum that allows users to Login, Add posts, comment on posts. We will also learn how to store these posts and comments in a database.
+  </p>
+  <h2><span>What Is Pyth</span>on</h2>
+  <p>
+    Python, first released in 1991, is one of the most popular languages at the time and is used by numerous developers worldwide. Python is considered to be a high-level language that prides it’s self on its easy to read code due to the indentation procedures that you follow when writing blocks of code.
+  </p>
+  <h2><span>What Is Fla</span>sk</h2>
+  <p>
+    Flask is considered a micro web framework due to it not requiring on a particular set of tools or libraries. Due to this it has a strong community that provide different tools and libraries for you to make use of in your development, this could be for anything from setting up a database; to performing input validation.</p><p>
+  <b>Flask</b> was written / developed in Python without a Database abstraction layer making it lightweight and easy to use compared to one of it’s close buddies <b>Django</b>.</p><p>
+  <b>Django</b> is still a good choice but is a large-scale framework that is great for database-driven websites.
+  </p><p class="boldaf">
+  For the time being we will be using Flask.
+
+  </p>
+  
+    <h2><span>First - The basic</span>s!</h2>
+  <p>
+    I’m sure by now you at least know what a website is and what their most common uses are. We use them constantly and these days even shops have decided that they are best to jump on the trend and join the ever-growing web community to maximise their client reach.
+  </p>
+  <p>
+    <b>As a developer.</b> Websites can mean a lot more than just another place to order and buy a nice new shiny watch, it’s a vision, a sense of achievement, it’s one way you can get your idea out their to the world. And the best part? It’s not as hard as you’d think.
+  </p>
+  <p class="boldaf">
+    Websites consist of 3 main web technologies. These are <b>HTML5</b>, <b>CSS3</b> and <b>JS</b>.
+  </p>
+  <p>
+    <b> HTML(Hyper Text Markup Language)</b> is the most commonly used web technology. It is used to describe to the <b>DOM(document Object Model)</b> what type of content is to be displayed on the website and tells it how to display it, <b>HTML</b> tells the <b>DOM</b> this by defining what is called <b>“tags”</b>. 
+  </p>
+  <p class="boldaf">
+    Below you can see a basic HTML page structure!
+  </p>
+  <p class="boldaf">
+    
+  </p>
+ <pre><code class="html">
+<ol>
+<li>&lt;html&gt;</li>
+<li>    &lt;head&gt;</li>
+<li>      &lt;title&gt;My First Site&lt;/title&gt;</li>
+<li>    &lt;/head&gt;</li>
+<li>  &lt;body&gt;</li>
+<li>&lt;!-- Code Goes Here --&gt;</li>
+<li>  &lt;/body&gt;</li>
+<li>&lt;/html&gt;</li>
+
+</ol>
+</code></pre>
+  <p class="boldaf">
+    lets work our way down the tags!
+  </p>
+  <ul>
+    <li><p><b>&lt;html&gt;&lt;/html&gt;</b> - These tags are used to specify that all data within these tags should be read, compiled and displayed by the DOM.</p></li>
+    
+    <li><p><b>&lt;head&gt;&lt;/head&gt;</b> - These Tags are one of the first interpreted by the DOM and is good practice to add in any files that may need loaded in here, such as CSS files, or script files to allow them to load at the start of the code instead of the end as this could cause issues in the future.</p></li>
+    
+    <li><p><b>&lt;title&gt;&lt;/title&gt;</b> - These tags are used to specify what the name of your website is going to be, the title tags are always located in between the <b>‘&lt;head&gt;&lt;/head&gt;’</b> tags in the document as this gives your site an identity.</p></li>
+    
+    <li><p><b>&lt;body&gt;&lt;/body&gt;</b> - These tags are used to specify where the main content of the website is, in between these tags you will have different tags representing different content such as text and multimedia items that you want to display to the user.</p></li>
+    <p class="boldaf">
+      Checkout <a href="https://www.w3schools.com/tags/">w3schools</a> for a list of more tags and how to use them.
+    </p>
+    
+  </ul>
+</div>
+<style>
+html, body{
+  margin:0;
+  padding:0;
+  height:auto;
+  width:100%;
+  background-color:#13003d;
+background-image: linear-gradient(to right top, #280083, #032994, #0041a0, #0056a8, #0069ac);
+font-family: 'Taviraj', serif;
+  background-repeat:no-repeat;
+
+}
+.banner{
+width:100%;
+  height:350px;
+  background-color:#ccc;
+  background-image:url("https://images.pexels.com/photos/169573/pexels-photo-169573.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  background-position:0px 0px;
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-attachment:fixed;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+}
+h1{
+  color:#fff;
+  font-size:3.25em;
+  padding:15px;
+  border:2px solid #fff;
+/*   mix-blend-mode:difference;   */
+}
+h2{
+  font-size:2.25em;
+  padding:15px;
+  
+}
+p{
+  font-size:1.25em;
+/*   width:70%; */
+  padding:0px 50px;
+  line-height:45px;
+}
+h2 > span{
+  border-bottom:2px solid #333;
+  
+}
+.content-main{
+  width:55%;
+  height:auto;
+  background-color:#fff;
+  margin:0 auto;
+  margin-top:-50px;
+  border-radius:10px;
+/*   padding:5px; */
+/*     text-align:center; */
+}
+pre{
+  text-align:left;
+  width:90%;
+  margin-left:auto;
+  margin-right:-50px;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  border-radius:10px;
+
+}
+code{
+
+}
+/* pre{
+  padding:15px;
+  background-color:#333;
+  color:#fff;
+  font-size:1.1em;
+  border-radius:10px;
+  box-shadow:inset 0px 0px 15px rgba(220, 220, 220, 0.5);
+} */
+ul{
+  list-style:none;
+}
+.tags{
+  color:red;
+}
+.boldaf{
+  font-weight:bold;
+  font-style:italic;
+}
+
+/*
+Monokai Sublime style. Derived from Monokai by noformnocontent http://nn.mit-license.org/
+*/
+
+.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+  background: #23241f;
+}
+
+.hljs,
+.hljs-tag,
+.hljs-subst {
+  color: #f8f8f2;
+  border-radius:10px;
+}
+
+.hljs-strong,
+.hljs-emphasis {
+  color: #a8a8a2;
+}
+
+.hljs-bullet,
+.hljs-quote,
+.hljs-number,
+.hljs-regexp,
+.hljs-literal,
+.hljs-link {
+  color: #ae81ff;
+}
+
+.hljs-code,
+.hljs-title,
+.hljs-section,
+.hljs-selector-class {
+  color: #a6e22e;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-name,
+.hljs-attr {
+  color: #f92672;
+}
+
+.hljs-symbol,
+.hljs-attribute {
+  color: #66d9ef;
+}
+
+.hljs-params,
+.hljs-class .hljs-title {
+  color: #f8f8f2;
+}
+
+.hljs-string,
+.hljs-type,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-selector-id,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-addition,
+.hljs-variable,
+.hljs-template-variable {
+  color: #e6db74;
+}
+
+.hljs-comment,
+.hljs-deletion,
+.hljs-meta {
+  color: #75715e;
+}
+</style>
+  </body>
+
+</html>
