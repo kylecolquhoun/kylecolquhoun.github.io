@@ -144,6 +144,17 @@ h3 > span{
 .buttons:hover{
 border-bottom:3px solid #fff;
 }
+.navbut{
+  position:fixed;
+  height:50px;
+  width:50px;
+  background-color:#333;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  color:#fff !important;
+  font-size:1.25em;
+}
 /*
 Monokai Sublime style. Derived from Monokai by noformnocontent http://nn.mit-license.org/
 */
