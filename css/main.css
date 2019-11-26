@@ -247,6 +247,9 @@ Monokai Sublime style. Derived from Monokai by noformnocontent http://nn.mit-lic
     height:150px;
     width:100%;
   }
+  .article-content{
+   width:100%;
+  }
   .content-main{
     width:100%;
   }
