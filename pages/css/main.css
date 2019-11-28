@@ -36,6 +36,15 @@ width:100%;
   flex-flow:column nowrap;
 
 }
+.banner-intro{
+  font-size:2em;
+  color:#fff;
+  padding:5px;
+  width:80%;
+  background-color:rgba(10, 10, 0, 0.5);
+  text-align:center;
+  margin:10px;
+}
 h1{
   color:#fff;
   font-size:3.25em;
