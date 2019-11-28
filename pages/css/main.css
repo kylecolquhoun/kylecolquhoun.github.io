@@ -21,6 +21,17 @@ font-family: 'Open Sans', sans-serif;
 .green-text{
   color:green;
 }
+.other-links{
+list-style:none;
+  display:flex;
+  color:#fff;
+  position:fixed;
+  top:5px;
+}
+.other-links > li{
+margin:5px;
+  
+}
 .banner{
 width:100%;
   height:350px;
