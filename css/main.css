@@ -120,6 +120,7 @@ h3 > span{
   background-size:cover;
 /*   background-attachment:fixed; */
 /* background-repeat:no-repeat; */
+  object-fit: cover;
 }
 .article-content{
   width:55%;
