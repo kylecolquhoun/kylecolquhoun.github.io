@@ -10,7 +10,7 @@ background: linear-gradient(to left, #24243e, #302b63, #0f0c29); /* W3C, IE 10+/
 
 font-family: 'Open Sans', sans-serif;
   background-repeat:no-repeat;
-
+overflow:hidden;
 }
 .banner{
 width:100%;
@@ -27,6 +27,66 @@ width:100%;
   align-items:center;
 
 }
+
+.titles:after {
+  width: 0px;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+  transition: .25s linear;
+  
+}
+
+.titles:nth-child(3):after {
+  content: 'eb';
+  
+}
+.titles:nth-child(4):after {
+  content: 'evelopment';
+}
+
+.abrev:hover span:nth-child(3):after {
+  width: 70px;
+}
+.abrev:hover span:nth-child(4):after {
+  width: 300px;
+}
+.abrev{
+  border:2px solid #fff;
+  padding:5px 10px;
+}
+.abrev:hover{
+  border:0px;
+  border-bottom:2px solid #fff;
+  padding:5px 10px;
+  animation:floatphone 0.25s ease;
+}
+.socials{
+  display:flex;
+  width:10%;
+justify-content:space-around;
+  align-items:center;
+position:fixed;
+  bottom:20px;
+}
+
+i{
+  font-size:2.5em;
+  color:rgba(10, 10, 0, 0.8);
+  transition:.25s ease;
+}
+i:hover{
+  cursor:pointer;
+}
+.fa-linkedin:hover{
+  color:rgba(72, 117, 180, 1);
+}
+.fa-envelope-square:hover{
+  color:rgba(198, 61, 45, 1);
+}
+.fa-blog:hover{
+  color:rgba(110, 84, 148, 1);
+}
 .banner-intro{
   font-size:2em;
   color:#fff;
@@ -36,6 +96,7 @@ width:100%;
   text-align:center;
   margin:10px;
 }
+
 h1{
   color:#fff;
   font-size:3.25em;
@@ -169,6 +230,9 @@ border-bottom:3px solid #fff;
   color:#fff !important;
   font-size:1.25em;
 }
+.red-text{
+  color:rgba(255, 0, 0, 0.8);
+}
 /*
 Monokai Sublime style. Derived from Monokai by noformnocontent http://nn.mit-license.org/
 */
@@ -269,9 +333,6 @@ Monokai Sublime style. Derived from Monokai by noformnocontent http://nn.mit-lic
   }
   h1{
     font-size:1.75em;
-  }
-  .banner-intro{
-  font-size:0.75em;
   }
   p{
     font-size:1em;
