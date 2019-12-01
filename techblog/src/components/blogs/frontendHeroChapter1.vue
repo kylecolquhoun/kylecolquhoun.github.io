@@ -138,14 +138,17 @@ This Chapter is just a brief introduction to the technologies that will be used 
   <p>
     This is just an introduction to the technologies that are going to be used. To start the project head to the next tutorial.
   </p>
-  
+  <navlink path="/frontendhero/chapter2" text="Click here for chapter 2"/>
 </div>
   </div>
 </template>
 
 <script>
+import navlink from '../navigation/navlink'
 export default {
-
+  components: {
+    navlink
+  },
 }
 </script>
 
