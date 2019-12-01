@@ -1,16 +1,25 @@
 <template>
-    <div class="banner">
-
-        <h1 class="title">
-            Eat. Sleep. Code. Repeat.
-        </h1>
-        <p class="banner-intro">You are invited to read through this Blog to discover and follow along on my journey through the crazy world of tech. From walkthroughs and guides to what I've been upto recently, join my side and lets grow together!</p>
+    <div>
+      <div class="navbut">
+        <a href="https://kylecolquhoun.github.io"><i class="fab fa-houzz"></i></a>
+      </div>
+      <h1 class="title">
+        Eat. Sleep. Code. Repeat.
+      </h1>
+      <p class="banner-intro">
+        You are invited to read through this Blog to discover and follow along 
+        on my journey through the crazy world of tech. From walkthroughs and 
+        guides to what I've been upto recently, join my side and lets grow together!
+      </p>
     </div>
 </template>
 
 <script>
 export default {
-    name: 'header'
+    name: 'header',
+    beforeMount() {
+      console.log(2)
+    }
 }
 </script>
 

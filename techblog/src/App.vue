@@ -1,21 +1,13 @@
 <template>
   <div id="app">
-    <header/>
     <router-view/>
-    <footer/>
   </div>
 </template>
 
 <script>
-import Header from './components/static/Header'
-import Footer from './components/static/Footer'
 
 export default {
-  name: 'App',
-  components: {
-    Header,
-    Footer
-  }
+  name: 'App'
 }
 </script>
 
@@ -147,39 +139,11 @@ ul{
   padding:10px;
   background-color:#fff3d4;
 }
-.article{
-  width:100%;
-  height:150px;
-  background-color:#fefefe;
-  display:flex;
-margin-bottom:10px;
-      box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-}
 h3{
   font-size:1.5em;
 }
 h3 > span{
   border-bottom:2px solid red;
-}
-.article-image{
-   object-fit: cover;
-  width:25%;
-  height:100%;
-  background-color:#333;
-/*   background-image:url("https://images.unsplash.com/photo-1550645612-83f5d594b671?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"); */
-  background-size:cover;
-/*   background-attachment:fixed; */
-/* background-repeat:no-repeat; */
-}
-.article-content{
-  width:55%;
-  margin:10px;
-
-}
-.article-buttons{
-  width:20%;
-  background-color:#333;
-  display:flex;
 }
 .buttons{
   width:calc(100% / 3);

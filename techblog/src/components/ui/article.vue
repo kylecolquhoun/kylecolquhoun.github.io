@@ -21,14 +21,40 @@ export default {
     props: ['authors', 'title', 'path'],
     components: {
         navlink
-    },
-    beforeMount() {
-        console.log(1)
     }
-
 }
 </script>
 
-<style>
+<style scoped>
+
+.article{
+    width:100%;
+    height:150px;
+    background-color:#fefefe;
+    display:flex;
+    margin-bottom:10px;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.article-image{
+   object-fit: cover;
+  width:25%;
+  height:100%;
+  background-color:#333;
+/*   background-image:url("https://images.unsplash.com/photo-1550645612-83f5d594b671?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"); */
+  background-size:cover;
+/*   background-attachment:fixed; */
+/* background-repeat:no-repeat; */
+}
+.article-content{
+  width:55%;
+  margin:10px;
+
+}
+.article-buttons{
+  width:20%;
+  background-color:#333;
+  display:flex;
+}
 
 </style>
