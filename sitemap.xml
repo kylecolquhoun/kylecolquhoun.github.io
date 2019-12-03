@@ -1,31 +1,21 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type='text/xsl' href='sitemap.xsl'?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<?xml version="1.0" encoding="utf-8"?>
+<!--Created using XmlSitemapGenerator.org - Free HTML, RSS and XML sitemap generator-->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
   <url>
-    <loc>https://kylecolquhoun.github.io/pages/frontendhero/chapter1.html</loc>
-    <changefreq>Monthly</changefreq>
-    <priority>1</priority>
-    <lastmod>2019-11-28T09:48:33Z</lastmod>
+    <loc>https://kcwebdevelopment.co.uk/</loc>
   </url>
   <url>
-    <loc>https://kylecolquhoun.github.io/pages/frontendhero/</loc>
-    <changefreq>Monthly</changefreq>
-    <priority>1</priority>
-    <lastmod>2019-11-28T09:48:33Z</lastmod>
+    <loc>https://kcwebdevelopment.co.uk/pages/kyle/aboutme.html</loc>
   </url>
   <url>
-    <loc>https://kylecolquhoun.github.io/</loc>
-    <changefreq>Monthly</changefreq>
-    <priority>1</priority>
-    <lastmod>2019-11-28T09:48:33Z</lastmod>
+    <loc>https://kcwebdevelopment.co.uk/pages/b1.html</loc>
   </url>
   <url>
-    <loc>https://kylecolquhoun.github.io/chapter2.html</loc>
-    <changefreq>Monthly</changefreq>
-    <priority>1</priority>
-    <lastmod>2019-11-28T09:48:33Z</lastmod>
+    <loc>https://kcwebdevelopment.co.uk/pages/frontendhero/chapter1.html</loc>
+  </url>
+  <url>
+    <loc>https://kcwebdevelopment.co.uk/pages/fsd-python/chapter1.html</loc>
   </url>
 </urlset>
+<!--<guid value="3258c1e0-33c2-45c8-a874-5958e6d2c352" />-->
+<!--Created using XmlSitemapGenerator.org - Free HTML, RSS and XML sitemap generator-->
