@@ -1,0 +1,130 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-141010328-2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'UA-141010328-2');
+    </script>
+
+    <meta name="author" content="Kyle Colquhoun">
+
+    <meta name="description" content="Looking for a fun new way to build websites? well look no further. This tutorial will take you through the ins and outs of learning the Flask framework
+for python in no time ensuring you have the skills needed to take on greater web development tasks in the future.">
+    <meta name="keywords" content="development, full stack, computing, tutorial, web development, software development, how to, python, html, css, javascript, js, jquery, vue.js, front-end, back-end">
+    <script src="https://kit.fontawesome.com/9035451757.js"></script>
+ <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.16.2/build/styles/default.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.16.2/build/highlight.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+    <link rel="icon" href="../images/tabicon.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../images/tabicon.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="../images/tabicon.png" />
+
+    <!-- basic.html -->
+    <title>simple Flask App | An Introduction to Flask</title>
+    <meta charset="UTF-8" />
+</head>
+
+<body>
+    <div class="navbut">
+        <a href="https://kylecolquhoun.github.io"><i class="fab fa-houzz"></i></a>
+    </div>
+    <div class="banner">
+  <h1>simple Flask App | An Introduction to Flask</h1>
+
+</div>
+ <div class="content-main">
+    <h2><span>Introducti</span>on</h2>
+   <p>Flask is a micro-web framework used for creating both small and enterprise level web applications.</p>
+   <p>
+     Flask is considered a micro-web framework due to the fact that it does not rely on a particular set of tools or libraries. Due to this Flask has developed a great community around it and has thousands of different tools and libraries that you can make use of in your projects and you only call on them when you have to.
+   </p>
+   <p>
+     Flask was written / developed in python without a database abstraction layer, making it lightweight and easy to use compared to one of it's closest buddies Django which is better suited for large-scale database-driven web applications.
+   </p>
+      <p>
+     Flask is great and easy to learn as it's one of the  languages that really don't require much to set up and for now all we will need is quite a simple file structure that we will move onto creating in the first steps towards your first flask-App.
+   </p>
+   <p class="boldaf">
+     For now, we will just be looking into Flask.
+   </p>
+
+   <h2><span>Set</span>up</h2>
+   <p class="boldaf">
+     the first thing we need to do is make sure that we install Flask, to do this I am documenting the code for terminal commands as linux based commands, just an FYI you may have to alter these slightly if you are using an OS different from linux.
+   </p>
+   <p>
+     If you have experience or worked with web applications before you may have noticed that some apps have certain file structures that are defined and expected to be followed to help the process of finding and locating the correct files that they need.
+   </p>
+   <p><b>Flask is no different.</b></p>
+   <p>
+     Infact with Flask it is not essential to use the filestructure but for the sake of simplicity we are going to be using a basic file structure, especially if you are knew to Flask this will help get your head round some of the basic features to see how the Flask framework runs.
+   </p>
+   <p>
+     So first off we are going to need to install some packages that will come in useful when we are working with the Flask framework.
+   </p>
+   <p><i>From here on we are assuming that you have python installed already, if not please head <a href="https://realpython.com/installing-python/">here</a> for a guide on installing python. </i></p>
+   <p><b>For starting this project please create a folder called "flask-app" and open this folder as this is the one we will be storing all our files for the project in.</b></p>
+   <h2><span>Installing P</span>ip</h2>
+   <p class="boldaf">Pip is a package manager for python that we are going to be using to install different packages or modules that we need to use in our project, including installing Flask as it can download the flask module quickly with all the packages we need.</p>
+   <pre><code class="cli">
+<ol>
+<li><span class="cli-code">kcwebdev:~/flask-app</span>$ curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py</li>
+<li><span class="cli-code">kcwebdev:~/flask-app</span>$ python get-pip.py<span class="cursorblinker">|</span></li>
+</ol>
+</code></pre>
+
+   <h2><span>Installing virtuale</span>nv</h2>
+   <p class="boldaf">
+     virtualenv is a tool that we are going to use for creating an isolated python environment. This means that we can work on this project without affecting any of our other projects in the future.
+   </p>
+   <pre><code class="cli">
+<ol>
+<li><span class="cli-code">kcwebdev:~/flask-app</span>$ pip install virtualenv</li>
+<li><span class="cli-code">kcwebdev:~/flask-app</span>$ virtualenv .venv</li>
+<li><span class="cli-code">kcwebdev:~/flask-app</span>$ source .venv/bin/activate</li>
+<li>(.venv)<span class="cli-code">kcwebdev:~/flask-app</span>$<span class="cursorblinker">|</span></li>
+</ol>
+</code></pre>
+   <p>Above you can see the steps taken to install virtualenv, you might have noticed a few things happening, all that has happened is a new folder has been set up called .venv and notice how on the command line next to our username it says"(.venv)" this indicates that the environment is active.</p>
+   <p>To stop using this virtual environment all you need to do is type <b><i>deactivate</i></b>.</p>
+   <h2><span>Installing Fla</span>sk</h2>
+   <pre><code class="cli">
+<ol>
+<li>(.venv)<span class="cli-code">kcwebdev:~/flask-app</span>$ pip install Flask<span class="cursorblinker">|</span></li>
+</ol>
+</code></pre>
+
+   <p>Now remember when I was discussing the file structure and how it's going to help us so for the next step we will create the neccessary folders that will make working with Flask a whole lot easier!</p>
+      <pre><code class="cli">
+<ol>
+<li>(.venv)<span class="cli-code">kcwebdev:~/flask-app</span>$ mkdir static templates<span class="cursorblinker">|</span></li>
+</ol>
+</code></pre>
+   <p>All we are doing in the above command is creating two new folders; static and templates. The static folder will be used in the future and is where we will store all our Images, CSS and JS files. The templates folder wil be used sooner than the static folder as this is the one that we will be adding any re-usable components into that we code using html in the near future.</p>
+   <h2><span>Basic co</span>de</h2>
+   <p>Now that the main structure is in place we can focus on getting something to look at on the screen!</p>
+   <p>To do this we need to create the main python file that will contain the code to run the Flask app, in this file we will be able to import modules / packages we installed using pip and reference them for use in our code, we will call this file "app.py", to do this we can run the following command: </p>
+         <pre><code class="cli">
+<ol>
+<li>(.venv)<span class="cli-code">kcwebdev:~/flask-app</span>$ touch app.py<span class="cursorblinker">|</span></li>
+</ol>
+</code></pre>
+   <p><b>Now that we have the main structure in place we can move onto the next chapter where we will actually start to develop our flask app.</b></p>
+  </div>
+</body>
+<script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+  document.querySelectorAll('pre code').forEach((block) => {
+    hljs.highlightBlock(block);
+  });
+});
+</script>
+
+</html>
