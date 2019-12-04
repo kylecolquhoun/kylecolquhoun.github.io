@@ -116,15 +116,52 @@ for python in no time ensuring you have the skills needed to take on greater web
 <li>(.venv)<span class="cli-code">kcwebdev:~/flask-app</span>$ touch app.py<span class="cursorblinker">|</span></li>
 </ol>
 </code></pre>
-   <p><b>Now that we have the main structure in place we can move onto the next chapter where we will actually start to develop our flask app.</b></p>
+   <p>Once you have created the file open it up and add in the following code to get our Flask app up and running!</p>
+   <pre><code class="python">
+<ol>
+
+<li>from flask import Flask</li>
+<li>app = Flask(__name__)</li>
+<li></li>
+<li>@app.route("/")</li>
+<li>def hello():</li>
+<li>  return "hello World!"</li>
+<li></li>
+<li>if __name__ == "__main__":</li>
+<li>  app.run()</li>
+
+</ol>
+</code></pre>
+   <p><b>Now save that file as app.py and jump back over to the command line and run the following command</b></p>
+       <pre><code class="cli">
+<ol>
+<li>(.venv)<span class="cli-code">kcwebdev:~/flask-app</span>$ python app.py<span class="cursorblinker">|</span></li>
+</ol>
+</code></pre>
+   <p>Output should be similar to this: </p>
+   <pre> * Serving Flask app &quot;app&quot; (lazy loading)
+ * Environment: production
+<font color="#CC0000">   WARNING: Do not use the development server in a production environment.</font>
+<font color="#AAAAAA">   Use a production WSGI server instead.</font>
+ * Debug mode: off
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+127.0.0.1 - - [04/Dec/2019 14:14:01] &quot;<font color="#D3D7CF">GET / HTTP/1.1</font>&quot; 200 -
+</pre>
+   <p><b>Now open up a web browser and enter "http://127.0.0.1:5000" in the URL bar and hit search to see the page you've created.</b></p>
+   <p>
+     Boom! now you can see your first Flask app with a Hello World! message displayed to the user.
+   </p>
+   <p class="boldaf">
+         I know, I know, it's yet another hello world app but what better way to learn the initial set up! Anyways in the next chapter we ellaborate on routes and templating and dive even deeper into the beautiful world of Flask. So what are you waiting for?! <a href="#">read Chapter 2 now</a>. See you on the flipside.
+   </p>
   </div>
 </body>
-<!--<script>-->
-<!--    document.addEventListener('DOMContentLoaded', (event) => {-->
-<!--  document.querySelectorAll('pre code').forEach((block) => {-->
-<!--    hljs.highlightBlock(block);-->
-<!--  });-->
-<!--});-->
-<!--</script>-->
+<script>
+ document.addEventListener('DOMContentLoaded', (event) => {
+  document.querySelectorAll('.python').forEach((block) => {
+    hljs.highlightBlock(block);
+  });
+});
+</script>
 
 </html>
