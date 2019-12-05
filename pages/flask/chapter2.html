@@ -1,0 +1,243 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-141010328-2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'UA-141010328-2');
+    </script>
+
+    <meta name="author" content="Kyle Colquhoun">
+
+    <meta name="description" content="Looking for a fun new way to build websites? well look no further. This tutorial will take you through the ins and outs of learning the Flask framework
+for python in no time ensuring you have the skills needed to take on greater web development tasks in the future.">
+    <meta name="keywords" content="development, full stack, computing, tutorial, web development, software development, how to, python, html, css, javascript, js, jquery, vue.js, front-end, back-end">
+    <script src="https://kit.fontawesome.com/9035451757.js"></script>
+ <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.16.2/build/styles/default.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.16.2/build/highlight.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+    <link rel="icon" href="../images/tabicon.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../images/tabicon.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="../images/tabicon.png" />
+
+    <!-- basic.html -->
+    <title>Simple Flask App | Routes & Templates</title>
+    <meta charset="UTF-8" />
+</head>
+
+<body>
+    <div class="navbut">
+        <a href="https://kylecolquhoun.github.io"><i class="fab fa-houzz"></i></a>
+    </div>
+    <div class="banner">
+  <h1>Simple Flask App | Routes & Templates</h1>
+
+</div>
+ <div class="content-main">
+      <h2><span>Chapter 1 Rec</span>ap</h2>
+   <p class="boldaf">In the the previous chapter, we ran through the basics of getting a simple flask app up and running, this included the installation and set up process of different packages such as virtualenv, pip and Flask also.</p>
+
+   <p>In this chapter we are going to be looking into adding some HTML into our website by creating templates, and styling the website with CSS so that you can see the importance of having the basic filestructure in place for your app. We will also make use of routes to allow us to render different templates for different routes.</p>
+
+   <h2><span>Routes</span></h2>
+   <p>In the code for the first example you seen that we made use of routes already, if you didn't notice, we done this by declaring the <span class="standout">@app.route("/")</span> decorator. In the decorator we passed the value of "<span class="standout">"/"</span>. This just means that when the user types the forward slash after the url, in this case <span class="standout">localhost:5000/</span>, that it should look for code that has been defined in the function assigned to the decorator.</p>
+   <p class="boldaf">Having a meaningful URL name comes with it's benefits, it creates a readable more user-friendly layout that users can easily memorise, by doing this we can also improve SEO for our projects; this in turn improves our sites ranking.</p>
+   <p><b>Open up your project and open the <span class="standout">app.py</span> file and update your code to include the new <span class="standout">/hello</span> route.</b></p>
+  <pre><code class="python">
+<ol>
+
+<li>from flask import Flask</li>
+<li>app = Flask(__name__)</li>
+<li></li>
+<li>@app.route("/")</li>
+<li>def hello():</li>
+<li>    return "Hello World!"</li>
+<li></li>
+<li>@app.route("/home")</li>
+<li>def home():</li>
+<li>    return "Welcome to the home page!"</li>
+<li></li>
+<li>if __name__ == "__main__":</li>
+<li>  app.run()</li>
+
+</ol>
+</code></pre>
+   <p>Now if you run your flask app again and add <span class="standout">/home</span> onto the end of the url you will see the message changes from "Hello world!" to "Welcome to the home page!".</p>
+   <p><b>This is cool but what if we want content on our homepage? Lets have a look at templates.</b></p>
+   <h2><span>Templat</span>es</h2>
+   <p><b>Remember in the first chapter how we set up the templates folder? well we are now going to start making use of it.</b></p>
+   <p>Flask makes use of the jinja template library to render templates on the users browser, templates are just files that contain static data that can be re used, they can also have placeholders / variables in them that allow us to dynamically render content for the user. We will be using HTML to create our templates.</p>
+   <p><b>Challenge: </b>Lets try creating a 4 page website using what we have learned so far and I will help you on the bits we've not covered.</p>
+   <p class="boldaf">We will continue to use the files we have used do far in this chapter so that we don't need to set up another app.py file as this is easy for us just to edit.</p>
+   <h2><span>Planes, Trains & Automobil</span>es</h2>
+   <h3><span>Step </span>1</h3>
+   <p>In your templates folder, create a new file called <span class="standout">base.html</span>, this will be the main HTML file that we use and it  will define the structure of the pages used in the website. We will also need to create a new folder inside the static folder called <span class="standout">images</span>.</p><p> In <span class="standout">base.html</span> add in the following code, we will run through this in a moment.</p>
+   <pre><code class="html">
+<ol>
+<li>&lt;html&gt;</li>
+<li>    &lt;head&gt;</li>
+<li>      &lt;title&gt;My First Flask Site&lt;/title&gt;</li>
+<li>    &lt;/head&gt;</li>
+<li>  &lt;body&gt;</li>
+<li>  &lt;div class="nav-bar"&gt;</li>
+<li>   &lt;ul&gt;</li>
+<li>      &lt;li&gt;Planes&lt;/li&gt;</li>
+<li>      &lt;li&gt;Trains&lt;/li&gt;</li>
+<li>      &lt;li&gt;Automobiles&lt;/li&gt;</li>
+<li>  &lt;/ul&gt;</li>
+<li>&lt;/div&gt;</li>
+<li>&lt;h1&gt;Welcome to my page about {% block title %}{% endblock %}&lt;/h1&gt;</li>
+<li>{% block picture %}</li>
+<li>&lt;!-- picture goes here --&gt;</li>
+<li>{% endblock %}</li>
+<li>&lt;p&gt;{% block content %}{% endblock %}&lt;/p&gt;</li>
+<li>  &lt;/body&gt;</li>
+<li>&lt;/html&gt;</li>
+
+</ol>
+</code></pre>
+   <p>As we already know about the basic page structure I'll talk you through what the code above has created.</p>
+   <ul class="bulleted">
+     <li><span class="red-text">line 6 - 12</span>:To navigate pages we need easy access so why not add in a nav-bar! We used a div element and gave it a class of <span class="standout">nav-bar</span>, inside this we created an unordered list containing links to the different pages we are going to have. For the time being we haven't added in the links, we will do this shortly.</li>
+     <li><span class="red-text">line 13 - 17</span>: Here you might have noticed that we didn't use HTML code, these are blocks and will help us render content for the user dynamically from the different templates that we will have created in the next steps.</li>
+   </ul>
+   <h3><span>Step </span>2</h3>
+   <p>Now we are going to create another 3 html files these will be called <span class="standout">planes.html</span>, <span class="standout">trains.html</span> and <span class="standout">automobiles.html</span>. These will all be very similar files so I will only be running through the code for one of them below and providing the code for the other two.</p>
+
+      <pre><code class="python">
+<ol>
+
+
+<li>{% extends 'base.html' %}</li>
+<li>{% block title %}</li>
+<li>Planes</li>
+<li>{% endblock %}</li>
+<li>{% block picture %}</li>
+<li>&lt;img src="{{ url_for('static', filename='images/plane.jpg')}}" class="picture"&gt;</li>
+<li>{% endblock %}</li>
+<li></li>
+<li>{% block content %}</li>
+<li>An airplane or aeroplane (informally plane) is a powered, fixed-wing aircraft that is propelled forward by thrust from
+a jet engine, propeller or rocket engine. ... The Wright brothers invented and flew the first airplane in 1903,
+recognized as "the first sustained and controlled heavier-than-air powered flight".</li>
+<li>{% endblock %}</li>
+
+</ol>
+</code></pre>
+   <p>I know it looks like theirs alot going on above but lets break it down again.</p>
+   <ul class="bulleted">
+     <li><span class="red-text">Line 1: </span><span class="standout">{% extends 'base.html' %}</span> this tells Flask that this template will inherit the content from <span class="standout">base.html</span>, this is good as it means we dont need to add in the whole html page structure in our template file as you can see we left out the common html, head, title tags etc as they are no longer neccessary.</li>
+
+     <li><span class="red-text">Line 2 - 4: </span><span class="standout">{% title %}Planes{% endblock %}</span> remember this from the base.html file? the only difference this time round is that we have added in a value between the opening and ending block, this value is what we want the title of the page to be, in this case it would be Planes.</li>
+
+     <li><span class="red-text">Line 5 - 7: </span>This works the same as the last block, however their is one difference we have passed a piece of html code as the value. If you look at the "src" attribute on the "img" tag, you will see we have used another great feature that Flask offers. <span class="standout">{{ url_for('static', filename='images/plane.jpg')}}</span> This is telling the app to look in the images directory that is inside our static directory, and find an image with the name <span class="standout">plane.jpg</span>. This is useful as it saves us having to provide a complete path to the image and if we decided to change the structure in the future, their wouldn't be much bother as the app still knows to look for the file and folders provided.</li>
+     <li><span class="red-text">Line 9 - 11: </span>Finally! These lines of code also make use of a block, they do this so that we can provide some information about planes to show the user on the webpage.</li>
+   </ul>
+   <p>Below you will find the code for <span class="standout">trains.html</span>.</p>
+         <pre><code class="python">
+<ol>
+
+
+<li>{% extends 'base.html' %}</li>
+<li>{% block title %}</li>
+<li>Trains</li>
+<li>{% endblock %}</li>
+<li>{% block picture %}</li>
+<li>&lt;img src="{{ url_for('static', filename='images/train.jpg')}}" class="picture"&gt;</li>
+<li>{% endblock %}</li>
+<li></li>
+<li>{% block content %}</li>
+<li>A train is a form of rail transport consisting of a series of connected vehicles that generally run along a railroad track to transport cargo or passengers. The word "train" comes from the Old French trahiner, derived from the Latin trahere meaning "to pull" or "to draw".</li>
+<li>{% endblock %}</li>
+
+</ol>
+</code></pre>
+   <p>Below you will find the code for <span class="standout">automobiles.html</span>.</p>
+            <pre><code class="python">
+<ol>
+
+
+<li>{% extends 'base.html' %}</li>
+<li>{% block title %}</li>
+<li>Automobiles</li>
+<li>{% endblock %}</li>
+<li>{% block picture %}</li>
+<li>&lt;img src="{{ url_for('static', filename='images/automobile.jpg')}}" class="picture"&gt;</li>
+<li>{% endblock %}</li>
+<li></li>
+<li>{% block content %}</li>
+<li>A car (or automobile) is a wheeled motor vehicle used for transportation. Most definitions of cars say that they run primarily on roads, seat one to eight people, have four tires, and mainly transport people rather than goods. Cars came into global use during the 20th century, and developed economies depend on them.</li>
+<li>{% endblock %}</li>
+
+</ol>
+</code></pre>
+   <h3><span>Step </span>3</h3>
+   <p>Now navigate back over to your <span class="standout">app.py</span> file and replace the route decorator for home with planes, and create another two routes for trains and automobiles.</p>
+   <p>In the code below you will see that we now changed the import statement at the top of our file to include render_template, this is a flask package that we can use to tell the app we would like to load a template html file instead of returning hard coded content.</p>
+
+               <pre><code class="python">
+<ol>
+
+
+<li>from flask import Flask, render_template</li>
+<li></li>
+<li>app = Flask(__name__)</li>
+<li></li>
+<li></li>
+<li>@app.route("/")</li>
+<li></li>
+<li>def hello():</li>
+<li></li>
+<li>    return "Hello World!"</li>
+<li></li>
+<li></li>
+<li>@app.route("/planes")</li>
+<li></li>
+<li>def planes():</li>
+<li></li>
+<li>    return render_template('planes.html')</li>
+<li></li>
+<li>@app.route("/trains")</li>
+<li></li>
+<li>def trains():</li>
+<li></li>
+<li>    return render_template('trains.html')</li>
+<li></li>
+<li></li>
+<li>@app.route("/trains")</li>
+<li></li>
+<li>def trains():</li>
+<li></li>
+<li>    return render_template('trains.html')</li>
+<li></li>
+<li></li>
+<li>@app.route("/automobiles")</li>
+<li></li>
+<li>def automobiles():</li>
+<li></li>
+<li>    return render_template('automobiles.html')</li>
+<li></li>
+<li></li>
+<li>if __name__ == "__main__":</li>
+<li></li>
+<li>    app.run()</li>
+
+</ol>
+</code></pre>
+  </div>
+</body>
+<script>
+ document.addEventListener('DOMContentLoaded', (event) => {
+  document.querySelectorAll('.python').forEach((block) => {
+    hljs.highlightBlock(block);
+  });
+});
+</script>
+
+</html>

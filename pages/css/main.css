@@ -190,6 +190,14 @@ h3 > span{
   margin:10px;
 
 }
+.bulleted{
+  list-style:square;
+
+    font-size:1.25em;
+/*   width:70%; */
+  padding:0px 50px;
+  line-height:45px;
+}
 .article-buttons{
   width:20%;
   background-color:#333;
