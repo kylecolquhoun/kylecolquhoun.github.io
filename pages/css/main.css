@@ -332,7 +332,7 @@ Monokai Sublime style. Derived from Monokai by noformnocontent http://nn.mit-lic
   .banner-intro{
   font-size:1em;
   }
-  p ul{
+  p, ul{
     font-size:1em;
     line-height:25px;
   }
