@@ -344,6 +344,7 @@ Monokai Sublime style. Derived from Monokai by noformnocontent http://nn.mit-lic
   margin-left:auto;
   margin-right:auto;
     font-size:0.75em;
+    overflow-x:scroll;
   }
   .article-buttons{
     height:50px;
