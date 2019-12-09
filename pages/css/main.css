@@ -12,6 +12,26 @@ font-family: 'Open Sans', sans-serif;
   background-repeat:no-repeat;
 
 }
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+/*   display:none; */
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.7); 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #ddd; 
+}
 .cli-code{
   color:#00ff00;
 }
