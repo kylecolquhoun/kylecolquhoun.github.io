@@ -15,7 +15,11 @@
           gtag('js', new Date());
           gtag('config', 'UA-141010328-2');
     </script>
-    
+    <script src="https://cdnjs.buttercms.com/buttercms-1.2.1.min.js"></script>
+
+<script>
+  var butter = Butter('c0f70ec0c71766cf603daabbab5dd1971009d97b');
+</script>
         <meta property="og:title" content="KC Web Development | Custom websites tailored specifically to you">
 <meta property="og:description" content="Young frontend developer based in Glasgow providing custom websites tailored specifically for you. Don't keep clients in the dark, get you're online presence today.">
 <meta property="og:image" content="https://kylecolquhoun99.github.io/me.jpg">
@@ -85,6 +89,9 @@
     hljs.highlightBlock(block);
   });
 });
+    butter.post.list({page: 1, page_size: 10}).then(function(response) {
+  console.log(response)
+})
 </script>
 
 </html>
