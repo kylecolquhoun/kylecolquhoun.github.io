@@ -1,0 +1,97 @@
+<template>
+  <div>
+      <div class="content-main">
+  <h2><span>Rec</span>ap</h2>
+  <p class="boldaf">
+In Chapter 1 we ran through the basics of HTML and CSS to get you used to seeing the syntax and explained some of the most crucial features in both to a level we can progress on through the chapters.
+  </p>
+  <p>
+  In this chapter we are going to look at the make-up of a website and common features that we can find across multiple sites that we can implement with ease. We will also look at these items and learn how it’s done.
+  </p>
+  <h2><span>Site Navigati</span>on</h2>
+  <p>
+  As you’ve seen on websites before they aren’t just made up of one page or section, there is often a lot of content to scroll through which soon becomes a pain in the backside when your looking for a key part on web page to quickly locate information, so to help users navigate websites and pages easier the developers started adding in navigation menus more commonly known as nav-bars. 
+  </p>
+  <p>
+  Nav-bars come in all different shapes and sizes as you can see across these different websites:
+  </p>
+  <p class="boldaf">images coming soon Check out the BBC and W3schools nav-bars for reference for now!</p>
+  <p>
+  Above you can see the two most common ways to create a nav-bar, the first is a horizontal nav bar and the second is a vertical nav bar (side-nav). As you can see they look different from each other but the main concept remains the same; provide a bunch of links to make the users life easier.
+  </p>
+  <p>
+  So how exactly is this accomplished?
+  </p>
+  <p>
+  Well, again like I said it’s easier than you think, all we need to do is create a list of links. To do this we are going to be using a tag called "&lt;ul&gt;". The "&lt;ul&gt;&lt;/ul&gt;" tags are used to define that we want to use an unordered / bulleted list. 
+  </p>
+  <p>
+  Now that we have defined that we want to use a list, we need to add in some items to that list. To do this we make use of the "&lt;li&gt;&lt;/li&gt;" tags. These are list item tags and are used alongside the "&lt;ul&gt;" tags to add new items to the list.
+  </p>
+  <h3>Example</h3>
+  <pre><code class="html">
+<ol>
+<li>&lt;html&gt;</li>
+<li>    &lt;head&gt;</li>
+<li>      &lt;title&gt;My First Site&lt;/title&gt;</li>
+<li>    &lt;/head&gt;</li>
+<li>  &lt;body&gt;</li>
+<li>&lt;ul class="my-nav"&gt;</li>
+<li>&lt;li&gt;Item 1&lt;/li&gt;</li>
+<li>&lt;li&gt;Item 2&lt;/li&gt;</li>
+<li>&lt;li&gt;Item 3&lt;/li&gt;</li>
+<li>&lt;li&gt;Item 4&lt;/li&gt;</li>
+<li>&lt;/ul&gt;</li>
+<li>&lt;style&gt;</li>
+<li>&lt;/style&gt;</li>
+<li>  &lt;/body&gt;</li>
+<li>&lt;/html&gt;</li>
+
+</ol>
+</code></pre>
+          <p class="boldaf">
+          As you can see in the above code for each item we want we add an opening &lt;li&gt; tag followed with the value we want to be displayed, then closed using the closing &lt;/li&gt; tag.
+          </p>
+          <p>
+          So now that we have the basic syntax down, lets take the code we have and adapt it to have hyperlinks to different pages and display the name of these pages.
+          </p>
+          <p>
+          To add hyperlinks into a webpage we need to make use of the anchor tag. This tag looks like &lt;a href=”#”&gt;Link text here&lt;/a&gt;.
+          </p>
+          <p>
+          Notice in the &lt;a href=”#”&gt; element there is an attribute called "href". For the value of href we pass the URL of the website or webpage that we want to link to, so the hashtag would become something like https://www.google.com which means when the user clicks on the text they will be redirected to the google site so lets take a look at the code.
+          </p>
+            <pre><code class="html">
+<ol>
+<li>&lt;html&gt;</li>
+<li>    &lt;head&gt;</li>
+<li>      &lt;title&gt;My First Site&lt;/title&gt;</li>
+<li>    &lt;/head&gt;</li>
+<li>  &lt;body&gt;</li>
+<li>&lt;ul class="my-nav"&gt;</li>
+<li>&lt;li&gt;&lt;a href="https://www.w3schools.com/"&gt;w3schools&lt;/a&gt;&lt;/li&gt;</li>
+<li>&lt;li&gt;&lt;a href="https://stackoverflow.com/"&gt;stackoverflow&lt;/a&gt;&lt;/li&gt;</li>
+<!-- For now we will comment out these two other list items so we can focus on the links -->
+<!-- <li>&lt;li&gt;Item 3&lt;/li&gt;</li>
+<li>&lt;li&gt;Item 4&lt;/li&gt;</li> -->
+<li>&lt;/ul&gt;</li>
+<li>&lt;style&gt;</li>
+<li>&lt;/style&gt;</li>
+<li>  &lt;/body&gt;</li>
+<li>&lt;/html&gt;</li>
+
+</ol>
+</code></pre>
+</div>
+  </div>
+</template>
+
+<script>
+export default {
+
+}
+</script>
+
+<style>
+
+</style>
